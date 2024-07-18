@@ -16,14 +16,14 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <header className="bg-gray-800 text-white p-4">
-        <h1 className="text-2xl font-bold">My App</h1>
+    <div className="min-h-screen flex flex-col bg-pink-50">
+      <header className="bg-pink-500 text-white p-4">
+        <h1 className="text-2xl font-bold">My Pink App</h1>
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8">
-        <h2 className="text-3xl font-semibold mb-4">Welcome to My App</h2>
-        <p className="mb-4">This is a bare-bones application that you can modify and build upon.</p>
+        <h2 className="text-3xl font-semibold mb-4 text-pink-700">Welcome to My Pink App</h2>
+        <p className="mb-4 text-pink-600">This is a pink-themed application that you can modify and build upon.</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <Input
@@ -31,13 +31,19 @@ const Index = () => {
             placeholder="Enter something..."
             value={inputValue}
             onChange={handleInputChange}
+            className="border-pink-300 focus:border-pink-500 focus:ring-pink-500"
           />
-          <Button type="submit">Submit</Button>
+          <Button 
+            type="submit"
+            className="bg-pink-500 hover:bg-pink-600 text-white"
+          >
+            Submit
+          </Button>
         </form>
       </main>
 
-      <footer className="bg-gray-200 p-4 text-center">
-        <p>&copy; 2023 My App. All rights reserved.</p>
+      <footer className="bg-pink-200 p-4 text-center text-pink-700">
+        <p>&copy; 2023 My Pink App. All rights reserved.</p>
       </footer>
     </div>
   );
